@@ -111,39 +111,22 @@ section {
   .skill-box1 {
     @include flex(1);
     margin: 10px 0;                     // 上下にマージン
-    padding: 20px 0 0;
-    background-color: $baseColor;
-    //@include border-radius(4px);
-    //@include box-sizing(border-box);
+    background-color: $keyColor;
     h3 {
       @extend .abel;
       @extend .uppercase;
       color: $keyColor;
-      margin-bottom:10px;
+      margin-bottom: 10px;
       font-size: 2.4rem;
       font-weight: bold;
+      background-color: $baseColor;
     }
     p {
       color: $subColor;
-      background-color: $keyColor;
-      padding: 30px;
+      font-size: 1.8rem;
+      //background-color: $keyColor;
+      padding: 20px;
       
-    }
-  }
-  .skill-box2 {
-    @include flex(1);
-    margin: 10px 0;                     // 上下にマージン
-    padding: 50px;
-    background-color: $keyColor;
-    //@include border-radius(4px);
-    //@include box-sizing(border-box);
-    h3 {
-      @extend .abel;
-      @extend .uppercase;
-      color: $subColor;
-      margin-bottom:10px;
-      font-size: 2.4rem;
-      font-weight: bold;
     }
   }
 }
@@ -157,11 +140,12 @@ section {
       @include flex-direction(row);     // スキルボックスを横に並べる
       justify-content: space-between;
     }
-    .skill-box1, .skill-box2 {
-      margin: 0 10px;                   // 左右にマージン
+    .skill-box1 {
+      margin: 10px 10px;                   // 左右にマージン
     }
   }
 }
+
 
 // Contact
 #contact {
@@ -176,10 +160,8 @@ section {
   .button_wrapper{
     text-align: center;
     .button1 {
-      //@include flex(1);
       @extend .abel;
       @extend .uppercase;
-      text-align: center;
       padding: 10px 0;                     // 上下にマージン
       width: 200px;
       height: 50px;
