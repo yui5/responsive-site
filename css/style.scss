@@ -1,0 +1,209 @@
+@import "compass";
+@import url(https://fonts.googleapis.com/css?family=Abel);
+// font-family
+$baseFontFamily :"游ゴシック", YuGothic, "メイリオ",Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
+// colors
+$baseColor: #dcdcdc;
+$subColor: #fdfcf6;
+$keyColor: #808080;
+$fontColor: #4c4c4c;
+
+
+/* Base
+------------------------------------------------------------*/
+html{ font-size: 62.5%; }
+
+body{
+  color: $fontColor;
+  font-size: 1.4rem;
+  font-family:$baseFontFamily;
+  line-height:1.6;
+  letter-spacing: 0.1em; 
+  background-color: $baseColor;
+}
+
+/* Align
+------------------------------------------------------------*/
+.text-center {
+  text-align: center;
+}
+
+/* Layout
+------------------------------------------------------------*/
+.block-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Font
+------------------------------------------------------------*/
+.abel {
+  font-family: 'Abel', sans-serif;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+
+// desktop
+@media (min-width: 769px) {
+
+  /* Base
+  ------------------------------------------------------------*/
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* Header
+------------------------------------------------------------*/
+
+header {
+  .back {
+    background-image:url("../images/Tiger-Edit_TP_V.jpg");
+    height: 500px;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+// desktop
+@media (max-width: 768px) {
+  header {
+    .back {
+      height: 250px;
+    }
+  }
+}
+
+/* Contents
+------------------------------------------------------------*/
+// Common Styles
+section {
+  padding: 60px 0;
+  .container {
+    width: 90%;
+    @extend .block-center;
+  }
+  h2 {
+    @extend .abel;
+    font-size: 3.2rem;
+    @extend .uppercase;
+  }
+}
+
+// Skills
+#skills {
+  background-color: $subColor;
+  .container {
+    @include display-flex;
+    justify-content: space-between;
+    @include flex-direction(column);    // スキルボックスを縦に並べる
+  }
+  h2 {
+    color: $keyColor;
+    margin-bottom: 60px;
+  }
+  .skill-box1 {
+    @include flex(1);
+    margin: 10px 0;                     // 上下にマージン
+    padding: 20px 0 0;
+    background-color: $baseColor;
+    //@include border-radius(4px);
+    //@include box-sizing(border-box);
+    h3 {
+      @extend .abel;
+      @extend .uppercase;
+      color: $keyColor;
+      margin-bottom:10px;
+      font-size: 2.4rem;
+      font-weight: bold;
+    }
+    p {
+      color: $subColor;
+      background-color: $keyColor;
+      padding: 30px;
+      
+    }
+  }
+  .skill-box2 {
+    @include flex(1);
+    margin: 10px 0;                     // 上下にマージン
+    padding: 50px;
+    background-color: $keyColor;
+    //@include border-radius(4px);
+    //@include box-sizing(border-box);
+    h3 {
+      @extend .abel;
+      @extend .uppercase;
+      color: $subColor;
+      margin-bottom:10px;
+      font-size: 2.4rem;
+      font-weight: bold;
+    }
+  }
+}
+
+// desktop
+@media (min-width: 769px) {
+  
+  // Skills
+  #skills {
+    .container {
+      @include flex-direction(row);     // スキルボックスを横に並べる
+      justify-content: space-between;
+    }
+    .skill-box1, .skill-box2 {
+      margin: 0 10px;                   // 左右にマージン
+    }
+  }
+}
+
+// Contact
+#contact {
+  h2 {
+        @extend .abel;
+        @extend .uppercase;
+        color: $keyColor;
+        margin-bottom:10px;
+        font-size: 1.8rem;
+        font-weight: bold;
+  }
+  .button_wrapper{
+    text-align: center;
+    .button1 {
+      //@include flex(1);
+      @extend .abel;
+      @extend .uppercase;
+      text-align: center;
+      padding: 10px 0;                     // 上下にマージン
+      width: 200px;
+      height: 50px;
+      background-color: $keyColor;
+      color: $baseColor;
+      font-size: 1.5rem;
+      font-weight: bold;
+      @include border-radius(4px);
+      @include box-sizing(border-box);
+    }
+  }
+}
+
+/* Footer
+------------------------------------------------------------*/
+/*
+footer {
+  background-color: $subColor;
+  padding: 10px 0;
+  text-align: center;
+  color: #FFF;
+}
+
+// desktop
+@media (min-width: 1025px) {
+}
+*/

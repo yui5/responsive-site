@@ -1,0 +1,145 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Abel);
+/* Base
+------------------------------------------------------------*/
+html {
+  font-size: 62.5%; }
+
+body {
+  color: #4c4c4c;
+  font-size: 1.4rem;
+  font-family: "游ゴシック", YuGothic, "メイリオ", Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+  background-color: #dcdcdc; }
+
+/* Align
+------------------------------------------------------------*/
+.text-center {
+  text-align: center; }
+
+/* Layout
+------------------------------------------------------------*/
+.block-center, section .container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+/* Font
+------------------------------------------------------------*/
+.abel, section h2, #skills .skill-box1 h3, #skills .skill-box2 h3, #contact h2, #contact .button_wrapper .button1 {
+  font-family: 'Abel', sans-serif; }
+
+.uppercase, section h2, #skills .skill-box1 h3, #skills .skill-box2 h3, #contact h2, #contact .button_wrapper .button1 {
+  text-transform: uppercase; }
+
+@media (min-width: 769px) {
+  /* Base
+  ------------------------------------------------------------*/
+  a:hover {
+    text-decoration: underline; } }
+/* Header
+------------------------------------------------------------*/
+header .back {
+  background-image: url("../images/Tiger-Edit_TP_V.jpg");
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+  background-position: center center; }
+
+@media (max-width: 768px) {
+  header .back {
+    height: 250px; } }
+/* Contents
+------------------------------------------------------------*/
+section {
+  padding: 60px 0; }
+  section .container {
+    width: 90%; }
+  section h2 {
+    font-size: 3.2rem; }
+
+#skills {
+  background-color: #fdfcf6; }
+  #skills .container {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    -webkit-flex-direction: column;
+    flex-direction: column; }
+  #skills h2 {
+    color: #808080;
+    margin-bottom: 60px; }
+  #skills .skill-box1 {
+    -webkit-flex: 1;
+    flex: 1;
+    margin: 10px 0;
+    padding: 20px 0 0;
+    background-color: #dcdcdc; }
+    #skills .skill-box1 h3 {
+      color: #808080;
+      margin-bottom: 10px;
+      font-size: 2.4rem;
+      font-weight: bold; }
+    #skills .skill-box1 p {
+      color: #fdfcf6;
+      background-color: #808080;
+      padding: 30px; }
+  #skills .skill-box2 {
+    -webkit-flex: 1;
+    flex: 1;
+    margin: 10px 0;
+    padding: 50px;
+    background-color: #808080; }
+    #skills .skill-box2 h3 {
+      color: #fdfcf6;
+      margin-bottom: 10px;
+      font-size: 2.4rem;
+      font-weight: bold; }
+
+@media (min-width: 769px) {
+  #skills .container {
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    justify-content: space-between; }
+  #skills .skill-box1, #skills .skill-box2 {
+    margin: 0 10px; } }
+#contact h2 {
+  color: #808080;
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+  font-weight: bold; }
+#contact .button_wrapper {
+  text-align: center; }
+  #contact .button_wrapper .button1 {
+    text-align: center;
+    padding: 10px 0;
+    width: 200px;
+    height: 50px;
+    background-color: #808080;
+    color: #dcdcdc;
+    font-size: 1.5rem;
+    font-weight: bold;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+
+/* Footer
+------------------------------------------------------------*/
+/*
+footer {
+  background-color: $subColor;
+  padding: 10px 0;
+  text-align: center;
+  color: #FFF;
+}
+
+// desktop
+@media (min-width: 1025px) {
+}
+*/
+
+/*# sourceMappingURL=style.css.map */
